@@ -1,14 +1,15 @@
 import Foundation
 import domain_recipe
+import infrastructure_network
 
 final class RecipesRepositoryImplementation: RecipesRepository {
-    private let recipesService: RecipesService
+    private let networkProvider: NetworkProvider
     
-    init(recipesService: RecipesService) {
-        self.recipesService = recipesService
+    init(networkProvider: NetworkProvider) {
+        self.networkProvider = networkProvider
     }
     
     func getRecipes(page: Int) async throws -> [Recipe] {
-        try await self.recipesService.getRecipes(page: page)
+        try await self.networkProvider.request(RecipesAPI.getRecipes(page: page))
     }
 }
