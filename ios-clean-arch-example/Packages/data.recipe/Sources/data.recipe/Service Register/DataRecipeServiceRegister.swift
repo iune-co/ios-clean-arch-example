@@ -10,5 +10,11 @@ public struct DataRecipeServiceRegister {
             return RecipesRepositoryImplementation(networkProvider: networkProvider)
         }
         container.register(registerRecipeRepository(), for: RecipesRepository.self)
+        
+        let getRecipesUseCase: () -> GetRecipesUseCase = {
+            let recipesRepository: RecipesRepository = container.resolve()
+            return GetRecipesUseCaseImplementation(repository: recipesRepository)
+        }
+        container.register(getRecipesUseCase(), for: GetRecipesUseCase.self)
     }
 }
