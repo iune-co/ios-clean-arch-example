@@ -3,6 +3,7 @@ import data_recipe
 import feature_recipe
 import infrastructure_dependencyContainer
 
+// sourced: https://medium.com/streamotion-tech-blog/magic-dependency-injection-in-swift-70476c7743ec
 public class DependencyManager: DependencyContainer {
     private var store: [String: () -> Any] = [:]
 
