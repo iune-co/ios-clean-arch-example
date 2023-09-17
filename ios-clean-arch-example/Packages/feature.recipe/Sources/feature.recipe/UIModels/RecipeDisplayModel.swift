@@ -1,4 +1,4 @@
-public struct Recipe: Decodable {
+public struct RecipeDisplayModel: Identifiable, Hashable {
     public let id: String
     public let name: String
     public let headline: String

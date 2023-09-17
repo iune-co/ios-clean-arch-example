@@ -14,6 +14,7 @@
 		644432892AB5F4E000106971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 644432882AB5F4E000106971 /* Assets.xcassets */; };
 		6444328C2AB5F4E000106971 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6444328B2AB5F4E000106971 /* Preview Assets.xcassets */; };
 		644432A52AB5F9AC00106971 /* RecipesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644432A42AB5F9AC00106971 /* RecipesScreen.swift */; };
+		645369542AB75DFE008D0771 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645369532AB75DFE008D0771 /* EdgeInsets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		644432CE2AB6033400106971 /* domain.recipe */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = domain.recipe; path = "ios-clean-arch-example/Packages/domain.recipe"; sourceTree = "<group>"; };
 		644432CF2AB6033400106971 /* infrastructure.dependencyManager */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = infrastructure.dependencyManager; path = "ios-clean-arch-example/Packages/infrastructure.dependencyManager"; sourceTree = "<group>"; };
 		644432D02AB6033400106971 /* infrastructure.dependencyContainer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = infrastructure.dependencyContainer; path = "ios-clean-arch-example/Packages/infrastructure.dependencyContainer"; sourceTree = "<group>"; };
+		645369532AB75DFE008D0771 /* EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsets.swift; sourceTree = "<group>"; };
 		64865A742AB7416900DF3F77 /* infrastructure.feature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = infrastructure.feature; path = "ios-clean-arch-example/Packages/infrastructure.feature"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 		644432832AB5F4DF00106971 /* ios-clean-arch-example */ = {
 			isa = PBXGroup;
 			children = (
+				645369522AB75DF3008D0771 /* Extensions */,
 				644432A22AB5F99800106971 /* Screens */,
 				644432842AB5F4DF00106971 /* ios_clean_arch_exampleApp.swift */,
 				644432882AB5F4E000106971 /* Assets.xcassets */,
@@ -119,6 +122,14 @@
 				64865A742AB7416900DF3F77 /* infrastructure.feature */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		645369522AB75DF3008D0771 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				645369532AB75DFE008D0771 /* EdgeInsets.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 			files = (
 				644432852AB5F4DF00106971 /* ios_clean_arch_exampleApp.swift in Sources */,
 				644432A52AB5F9AC00106971 /* RecipesScreen.swift in Sources */,
+				645369542AB75DFE008D0771 /* EdgeInsets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

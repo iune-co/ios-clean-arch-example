@@ -1,9 +1,8 @@
 import SwiftUI
-import domain_recipe
 
 public final class RecipesViewModelImplementation: RecipesViewModel, ObservableObject {
     private let presenter: RecipesPresenter
-    @Published public private(set) var recipes: [Recipe]
+    @Published public private(set) var recipes: [RecipeDisplayModel]
     @Published public private(set) var error: Error?
     
     public init(presenter: RecipesPresenter) {
