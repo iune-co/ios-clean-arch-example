@@ -4,12 +4,34 @@ import infrastructure_network
 
 final class RecipesRepositoryImplementation: RecipesRepository {
     private let networkProvider: NetworkProvider
+    private let mapper: RecipeMapper
     
-    init(networkProvider: NetworkProvider) {
+    init(networkProvider: NetworkProvider, mapper: RecipeMapper) {
         self.networkProvider = networkProvider
+        self.mapper = mapper
     }
     
     func getRecipes(page: Int) async throws -> [Recipe] {
-        try await self.networkProvider.request(RecipesAPI.getRecipes(page: page))
+        let apiModels: [RecipeAPIModel] = try await self.networkProvider.request(RecipesAPI.getRecipes(page: page))
+        
+        return try await withThrowingTaskGroup(
+            of: Recipe.self,
+            body: { [weak self] group in
+                guard let self = self else { return [] }
+                
+                for apiModel in apiModels {
+                    group.addTask {
+                        self.mapper.convertToRecipe(apiModel)
+                    }
+                }
+                
+                var recipes: [Recipe] = []
+                for try await recipe in group {
+                    recipes.append(recipe)
+                }
+                
+                return recipes
+            }
+        )
     }
 }

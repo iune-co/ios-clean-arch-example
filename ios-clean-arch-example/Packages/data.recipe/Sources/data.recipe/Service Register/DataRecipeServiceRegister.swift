@@ -11,7 +11,8 @@ public struct DataRecipeServiceRegister: ServiceRegister {
     public func register(on container: DependencyContainer) {
         let registerRecipeRepository: () -> RecipesRepository = {
             let networkProvider: NetworkProvider = container.resolve()
-            return RecipesRepositoryImplementation(networkProvider: networkProvider)
+            let mapper: RecipeMapper = RecipeMapperImplementation()
+            return RecipesRepositoryImplementation(networkProvider: networkProvider, mapper: mapper)
         }
         container.register(registerRecipeRepository(), for: RecipesRepository.self)
         
