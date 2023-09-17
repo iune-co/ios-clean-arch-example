@@ -17,6 +17,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../domain.recipe"),
+        .package(path: "../infrastructure.feature"),
         .package(path: "../infrastructure.dependencyContainer")
     ],
     targets: [
@@ -28,6 +29,10 @@ let package = Package(
                 .product(
                     name: "domain.recipe",
                     package: "domain.recipe"
+                ),
+                .product(
+                    name: "infrastructure.feature",
+                    package: "infrastructure.feature"
                 ),
                 .product(
                     name: "infrastructure.dependencyContainer",
