@@ -1,7 +1,3 @@
-import domain_recipe
-import data_recipe
-import feature_recipe
-import infrastructure_network
 import infrastructure_dependencyContainer
 
 // sourced: https://medium.com/streamotion-tech-blog/magic-dependency-injection-in-swift-70476c7743ec
@@ -33,8 +29,12 @@ public class DependencyManager: DependencyContainer {
     }
 }
 
+import domain_recipe
+import data_recipe
+import feature_recipe
+import infrastructure_network
 extension DependencyManager {
-    public static func toPreviewInstance() -> DependencyManager {
+    public static func toPreviewInstance() -> Resolver {
         DependencyManager(
             storage: DependencyStorageImplementation(),
             serviceRegisters: [

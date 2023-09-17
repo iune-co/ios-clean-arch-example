@@ -57,7 +57,7 @@ private struct RecipesCard: View {
 
 import infrastructure_dependencyManager
 struct RecipesScreen_Previews: PreviewProvider {
-    static let resolver: Resolver = DependencyManager.toPreviewInstance()
+    static let resolver = DependencyManager.toPreviewInstance()
     static var previews: some View {
         RecipesScreen(resolver: resolver)
     }
