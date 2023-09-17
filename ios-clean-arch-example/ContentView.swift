@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  ios-clean-arch-example
-//
-//  Created by Eduardo Dias on 16/09/2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {
