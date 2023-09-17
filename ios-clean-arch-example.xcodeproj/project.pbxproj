@@ -29,7 +29,6 @@
 		644432CE2AB6033400106971 /* domain.recipe */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = domain.recipe; path = "ios-clean-arch-example/Packages/domain.recipe"; sourceTree = "<group>"; };
 		644432CF2AB6033400106971 /* infrastructure.dependencyManager */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = infrastructure.dependencyManager; path = "ios-clean-arch-example/Packages/infrastructure.dependencyManager"; sourceTree = "<group>"; };
 		644432D02AB6033400106971 /* infrastructure.dependencyContainer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = infrastructure.dependencyContainer; path = "ios-clean-arch-example/Packages/infrastructure.dependencyContainer"; sourceTree = "<group>"; };
-		6483D7E62AB73E9000B56645 /* infrastructure.feature */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = infrastructure.feature; path = "ios-clean-arch-example/Packages/infrastructure.feature"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +115,6 @@
 				644432D02AB6033400106971 /* infrastructure.dependencyContainer */,
 				644432CF2AB6033400106971 /* infrastructure.dependencyManager */,
 				644432CD2AB6033400106971 /* infrastructure.network */,
-				6483D7E62AB73E9000B56645 /* infrastructure.feature */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
