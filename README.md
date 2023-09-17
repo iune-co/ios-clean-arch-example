@@ -13,6 +13,10 @@ Because of how `@StateObject` and `ObservableObject` works, it's difficult to de
 
 ## Improvements
 
+### Make a mapper for the RecipesPresenter to convert between DisplayModels and Entities
+
+### Error handling
+
 ### Accessors should be reviewed
 At this time, it's still WIP, so it needs revision.
 
@@ -36,3 +40,6 @@ extension DependencyManager {
 
 Guess there's no way around this using protocols 🤷‍♂️
 
+### Some other notes
+
+`RecipeMapperImplementation` and `RecipesPresenterImplementation` convert between Entities and usable models for lower-level layers. Even though this is non-trivial, we used TaskGroups to make it neat (and save the code for later 😬). Actually, to maintain consistency, RecipesPresenter should depend on a *humble* mapper instead! 

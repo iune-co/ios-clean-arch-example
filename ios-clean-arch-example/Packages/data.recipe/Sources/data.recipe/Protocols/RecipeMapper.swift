@@ -1,5 +1,5 @@
 import domain_recipe
 
 protocol RecipeMapper {
-    func convertToRecipe(_: RecipeAPIModel) -> Recipe
+    func convertToRecipes(_ models: [RecipeAPIModel]) async throws -> [Recipe]
 }

@@ -13,25 +13,6 @@ final class RecipesRepositoryImplementation: RecipesRepository {
     
     func getRecipes(page: Int) async throws -> [Recipe] {
         let apiModels: [RecipeAPIModel] = try await self.networkProvider.request(RecipesAPI.getRecipes(page: page))
-        
-        return try await withThrowingTaskGroup(
-            of: Recipe.self,
-            body: { [weak self] group in
-                guard let self = self else { return [] }
-                
-                for apiModel in apiModels {
-                    group.addTask {
-                        self.mapper.convertToRecipe(apiModel)
-                    }
-                }
-                
-                var recipes: [Recipe] = []
-                for try await recipe in group {
-                    recipes.append(recipe)
-                }
-                
-                return recipes
-            }
-        )
+        return try await mapper.convertToRecipes(apiModels)
     }
 }
