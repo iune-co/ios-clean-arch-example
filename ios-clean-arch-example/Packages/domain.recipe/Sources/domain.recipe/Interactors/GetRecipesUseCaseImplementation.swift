@@ -1,5 +1,3 @@
-import domain_recipe
-
 final class GetRecipesUseCaseImplementation: GetRecipesUseCase {
     private let repository: RecipesRepository
     

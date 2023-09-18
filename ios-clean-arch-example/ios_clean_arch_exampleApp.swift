@@ -1,4 +1,5 @@
 import SwiftUI
+import domain_recipe
 import data_recipe
 import feature_recipe
 import infrastructure_network
@@ -9,6 +10,7 @@ struct ios_clean_arch_exampleApp: App {
     private let dependencyManager = DependencyManager(
         storage: DependencyStorageImplementation(),
         serviceRegisters: [
+            DomainRecipeServiceRegister(),
             DataRecipeServiceRegister(),
             FeatureRecipeServiceRegister(),
             NetworkServiceRegister()

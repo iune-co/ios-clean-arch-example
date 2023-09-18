@@ -15,6 +15,7 @@
 		6444328C2AB5F4E000106971 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6444328B2AB5F4E000106971 /* Preview Assets.xcassets */; };
 		644432A52AB5F9AC00106971 /* RecipesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644432A42AB5F9AC00106971 /* RecipesScreen.swift */; };
 		645369542AB75DFE008D0771 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645369532AB75DFE008D0771 /* EdgeInsets.swift */; };
+		645369562AB8B488008D0771 /* domain.recipe in Frameworks */ = {isa = PBXBuildFile; productRef = 645369552AB8B488008D0771 /* domain.recipe */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 				6419771D2AB60370004CFB78 /* infrastructure.dependencyManager in Frameworks */,
 				641977192AB60370004CFB78 /* feature.recipe in Frameworks */,
 				6419771B2AB60370004CFB78 /* infrastructure.dependencyContainer in Frameworks */,
+				645369562AB8B488008D0771 /* domain.recipe in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +154,7 @@
 				641977182AB60370004CFB78 /* feature.recipe */,
 				6419771A2AB60370004CFB78 /* infrastructure.dependencyContainer */,
 				6419771C2AB60370004CFB78 /* infrastructure.dependencyManager */,
+				645369552AB8B488008D0771 /* domain.recipe */,
 			);
 			productName = "ios-clean-arch-example";
 			productReference = 644432812AB5F4DF00106971 /* ios-clean-arch-example.app */;
@@ -431,6 +434,10 @@
 		6419771C2AB60370004CFB78 /* infrastructure.dependencyManager */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = infrastructure.dependencyManager;
+		};
+		645369552AB8B488008D0771 /* domain.recipe */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = domain.recipe;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
